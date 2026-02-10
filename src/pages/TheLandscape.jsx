@@ -367,7 +367,7 @@ function Slide_Title() {
       </div>
       <div style={a(3)}>
         <p style={{ fontFamily: font, fontSize: 18, color: C.gray7, fontWeight: 400 }}>
-          mkedmc.org &nbsp;&middot;&nbsp; February 10, 2026
+          Northshore Chamber of Commerce &nbsp;&middot;&nbsp; February 10, 2026
         </p>
       </div>
       <div style={a(4)}>
