@@ -1567,12 +1567,12 @@ function Slide_ChecklistIntro() {
       </div>
       <div style={a(4)}>
         <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.6, maxWidth: 600, marginBottom: 20 }}>
-          Most businesses skip this step. They jump straight to &ldquo;we need a website&rdquo; without answering <span style={{ fontWeight: 700, color: C.orange }}>why</span>. Are you trying to generate leads? Sell products? Build brand awareness? Each goal requires a fundamentally different approach.
+          It&rsquo;s easy to jump straight to &ldquo;we need a website&rdquo; without answering <span style={{ fontWeight: 700, color: C.orange }}>why</span>. Are you trying to generate leads? Sell products? Build brand awareness? Each goal requires a different approach.
         </p>
       </div>
       <div style={a(5)}>
         <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.black, marginTop: 8 }}>
-          This checklist covers what an impactful website actually needs.
+          This checklist covers what an impactful website typically needs.
         </p>
       </div>
     </div>
@@ -1582,9 +1582,9 @@ function Slide_ChecklistIntro() {
 function Slide_CL_Homepage() {
   const a = useEnter();
   const points = [
-    { num: '01', text: 'Explain what you do, who you do it for, and how it works. No cleverness over clarity.' },
+    { num: '01', text: 'Explain what you do, who you do it for, and how it works. If someone has to think about what you mean, they\u2019ll leave before they figure it out.' },
     { num: '02', text: 'A first-time visitor should understand your business within 5 seconds of landing on the page.' },
-    { num: '03', text: '\u201CWe help small businesses get found online\u201D beats \u201CFull-service digital marketing agency with 12 core competencies.\u201D' },
+    { num: '03', text: '\u201CWe help small businesses get found online\u201D works harder than \u201CFull-service digital marketing agency with 12 core competencies.\u201D' },
   ];
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px 80px', gap: 60 }}>
@@ -1622,8 +1622,8 @@ function Slide_CL_Homepage() {
 function Slide_CL_Navigation() {
   const a = useEnter();
   const items = [
-    { icon: Menu, title: 'Readable menus', desc: 'Someone should understand what your business does just by reading the navigation.' },
-    { icon: Zap, title: 'Keep it simple', desc: 'If you have more than 7 top-level navigation items, simplify.' },
+    { icon: Menu, title: 'Readable menus', desc: 'Someone should be able to understand what your business does just by reading the navigation.' },
+    { icon: Zap, title: 'Keep it simple', desc: 'More than 7 top-level navigation items usually means there\u2019s room to simplify.' },
     { icon: BookOpen, title: 'Plain language', desc: '\u201CWhat We Do\u201D is clearer than \u201CSolutions.\u201D Label pages the way your customers talk.' },
   ];
   return (
@@ -1679,7 +1679,7 @@ function Slide_CL_ServicePages() {
         </div>
         <div style={a(2)}>
           <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.65, marginBottom: 20 }}>
-            Separate service pages drive more traffic from search engines. Each page lets you speak directly to a specific audience.
+            Separate service pages tend to drive more traffic from search engines. Each page lets you speak directly to a specific audience.
           </p>
         </div>
         <div style={a(3)}>
@@ -1689,7 +1689,7 @@ function Slide_CL_ServicePages() {
         </div>
         <div style={a(4)}>
           <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.black, lineHeight: 1.4 }}>
-            One page trying to cover everything ends up saying nothing well.
+            One page trying to cover everything often ends up saying nothing particularly well.
           </p>
         </div>
       </div>
@@ -1731,7 +1731,7 @@ function Slide_CL_People() {
       </div>
       <div style={{ display: 'flex', gap: 24, marginBottom: 32, justifyContent: 'center' }}>
         {[
-          { icon: Users, label: 'Real photos of your team', desc: 'Not stock photos. Not AI-generated images.' },
+          { icon: Users, label: 'Real photos of your team', desc: 'Rather than stock photos or AI-generated images.' },
           { icon: Phone, label: 'Doesn\u2019t need to be studio quality', desc: 'A well-lit photo from a phone works.' },
           { icon: Eye, label: 'Customers want to see who they\u2019re hiring', desc: 'Before they pick up the phone.' },
         ].map((item, i) => (
@@ -1771,7 +1771,7 @@ function Slide_CL_Proof() {
         </div>
         <div style={a(2)}>
           <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.65, marginBottom: 16 }}>
-            Reviews, testimonials, and case studies do more selling than any headline you write. Spend most of your effort here.
+            Reviews, testimonials, and case studies often do more selling than any headline you write. These are worth gathering and placing thoughtfully.
           </p>
         </div>
         <div style={a(3)}>
@@ -1793,7 +1793,7 @@ function Slide_CL_Proof() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <ThumbsUp size={14} color={C.orange} />
             <span style={{ fontFamily: font, fontSize: 12, color: C.gray7 }}>
-              <span style={{ fontWeight: 700 }}>Specific numbers</span> are more convincing than vague claims
+              <span style={{ fontWeight: 700 }}>Specific numbers</span> give people something to hold onto. Vague claims sound like marketing.
             </span>
           </div>
         </GlassCard>
@@ -1863,7 +1863,7 @@ function Slide_CL_Objections() {
         </div>
         <div style={a(2)}>
           <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.65 }}>
-            Think about the questions you hear most on sales calls. Put those answers on the website. This reduces friction and saves your team time.
+            Think about the questions you hear most on sales calls. Putting those answers on the website can reduce friction and save your team time.
           </p>
         </div>
       </div>
@@ -1907,7 +1907,7 @@ function Slide_CL_BuyerStages() {
     },
     {
       stage: 'Evaluators', action: 'A comparison page',
-      desc: 'Comparing options. Help them see why you\u2019re different.',
+      desc: 'Comparing options. Help them see what makes you different.',
       icon: Layers, color: C.orange,
     },
     {
@@ -1926,7 +1926,7 @@ function Slide_CL_BuyerStages() {
           Not Everyone Is Ready to Buy
         </h2>
         <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.6, marginBottom: 32, maxWidth: 580 }}>
-          If your only call to action is &ldquo;Contact Us,&rdquo; you&rsquo;re losing everyone who isn&rsquo;t ready for that conversation yet.
+          If the only call to action is &ldquo;Contact Us,&rdquo; the visitors who aren&rsquo;t ready for that conversation yet may not have a reason to stay.
         </p>
       </div>
       <div style={{ display: 'flex', gap: 20 }}>
@@ -1969,26 +1969,24 @@ function Slide_CL_Pricing() {
       </div>
       <div style={a(1)}>
         <h2 style={{ fontFamily: font, fontSize: 48, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 28, maxWidth: 650 }}>
-          Don&rsquo;t Make People Guess
+          Give People Context
         </h2>
       </div>
       <div style={a(2)}>
         <p style={{ fontFamily: font, fontSize: 18, color: C.gray7, lineHeight: 1.65, maxWidth: 600, marginBottom: 28 }}>
-          You don&rsquo;t need to list exact prices. But give context. Starting ranges, &ldquo;projects typically range from X to Y,&rdquo; or a pricing calculator.
+          You don&rsquo;t need to list exact prices. But context helps. Starting ranges, &ldquo;projects typically range from X to Y,&rdquo; or a pricing calculator.
         </p>
       </div>
       <div style={a(3)}>
+        <p style={{ fontFamily: font, fontSize: 18, color: C.gray7, lineHeight: 1.65, maxWidth: 600, marginBottom: 20 }}>
+          Most buyers want some pricing information before they talk to a salesperson.
+        </p>
+      </div>
+      <div style={a(4)}>
         <GlassCard glow={C.orange} style={{ maxWidth: 520, textAlign: 'center' }}>
           <Eye size={28} color={C.orange} style={{ margin: '0 auto 14px', display: 'block' }} />
-          <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.black, marginBottom: 10 }}>
-            Hiding pricing doesn&rsquo;t create curiosity.
-          </p>
-          <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.orange }}>
-            It creates frustration.
-          </p>
-          <div style={{ width: '100%', height: 1, background: C.gray3, margin: '16px 0' }} />
-          <p style={{ fontFamily: font, fontSize: 13, color: C.gray7, lineHeight: 1.5 }}>
-            Most buyers want pricing information before they talk to a salesperson.
+          <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.black }}>
+            Even a starting point helps someone understand whether they&rsquo;re in the right ballpark.
           </p>
         </GlassCard>
       </div>
@@ -2001,22 +1999,22 @@ function Slide_CL_Technical() {
   const items = [
     {
       icon: Zap, title: 'Page speed', color: C.orange,
-      desc: 'If your site takes more than 3 seconds to load, over half of visitors leave before they see anything.',
+      desc: 'If a website takes more than 3 seconds to load, over half of visitors tend to leave before they see anything.',
       stat: '3s', statLabel: 'max load time',
     },
     {
       icon: Phone, title: 'Mobile-first', color: C.google,
-      desc: 'More than 60% of website traffic comes from mobile devices. Design for phones first.',
+      desc: 'More than 60% of website traffic comes from mobile devices. Designing for phones first usually makes sense.',
       stat: '60%+', statLabel: 'mobile traffic',
     },
     {
       icon: TrendingUp, title: 'Analytics', color: '#0fa035',
-      desc: 'Set up analytics before you launch. You can\u2019t improve what you don\u2019t measure.',
+      desc: 'Set up analytics before you launch. It\u2019s hard to improve what you\u2019re not measuring.',
       stat: 'Day 1', statLabel: 'configure tracking',
     },
     {
       icon: Users, title: 'Accessibility', color: '#7c3aed',
-      desc: '1 in 5 people has a disability. Accessible websites are easier for everyone to use \u2014 and it\u2019s increasingly a legal requirement.',
+      desc: '1 in 5 people has a disability. Accessible websites are easier for everyone to use, and it\u2019s increasingly a legal consideration.',
       stat: '1 in 5', statLabel: 'people affected',
     },
   ];
@@ -2027,7 +2025,7 @@ function Slide_CL_Technical() {
           Technical foundations
         </p>
         <h2 style={{ fontFamily: font, fontSize: 40, fontWeight: 700, color: C.black, marginBottom: 28, lineHeight: 1.1 }}>
-          The Technical Non-Negotiables
+          The Technical Foundations
         </h2>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
@@ -2073,7 +2071,7 @@ function Slide_CL_LivingSystem() {
         </div>
         <div style={a(1)}>
           <h2 style={{ fontFamily: font, fontSize: 44, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 24 }}>
-            The One Thing Most People Miss
+            The One Thing That Often Gets Missed
           </h2>
         </div>
         <div style={a(2)}>
@@ -2083,7 +2081,7 @@ function Slide_CL_LivingSystem() {
         </div>
         <div style={a(3)}>
           <p style={{ fontFamily: font, fontSize: 16, color: C.orange, fontWeight: 700, lineHeight: 1.5 }}>
-            The businesses that treat their website as a living system outperform the ones that launch and forget. Every time.
+            The businesses that treat their website as a living system tend to outperform the ones that launch and move on.
           </p>
         </div>
       </div>
@@ -2092,7 +2090,7 @@ function Slide_CL_LivingSystem() {
           {[
             { icon: Star, text: 'Update case studies and testimonials quarterly' },
             { icon: FileText, text: 'Refresh service pages when offerings change' },
-            { icon: Clock, text: 'Publish helpful content consistently \u2014 even once a month makes a difference' },
+            { icon: Clock, text: 'Publish helpful content consistently \u2014 even once a month makes a difference over time' },
           ].map((item, i) => (
             <div key={i} style={a(i + 3)}>
               <div style={{
@@ -2126,8 +2124,8 @@ function Slide_CL_Checklist() {
     'Navigation is clear and logical',
     'One dedicated page per service',
     'Real photos of your team and work',
-    'Reviews, testimonials, or case studies on the site',
-    'Specific numbers and results instead of vague claims',
+    'Reviews, testimonials, or case studies on the website',
+    'Specific numbers and results rather than vague claims',
     'A \u201CHow It Works\u201D section that sets expectations',
     'FAQ sections addressing real objections',
   ];
@@ -2175,12 +2173,50 @@ function Slide_CL_Checklist() {
       <div style={a(3)}>
         <div style={{ textAlign: 'center' }}>
           <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.orange, marginBottom: 6 }}>
-            Design isn&rsquo;t a phase. It&rsquo;s a discipline.
+            Design doesn&rsquo;t stop when the website launches.
           </p>
           <p style={{ fontFamily: font, fontSize: 15, color: C.gray7 }}>
-            The &ldquo;why&rdquo; behind your website doesn&rsquo;t stop mattering after launch day.
+            The questions you asked at the start keep mattering.
           </p>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function Slide_BiggerPicture() {
+  const a = useEnter();
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', textAlign: 'center', padding: '60px 80px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+          Beyond the website
+        </p>
+      </div>
+      <div style={a(1)}>
+        <h2 style={{ fontFamily: font, fontSize: 48, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 28, maxWidth: 700 }}>
+          The Bigger Picture
+        </h2>
+      </div>
+      <div style={a(2)}>
+        <p style={{ fontFamily: font, fontSize: 18, color: C.gray7, lineHeight: 1.65, maxWidth: 640, marginBottom: 20 }}>
+          A well-built website is one surface among many. It&rsquo;s necessary, but it&rsquo;s not the whole picture.
+        </p>
+      </div>
+      <div style={a(3)}>
+        <p style={{ fontFamily: font, fontSize: 18, color: C.gray7, lineHeight: 1.65, maxWidth: 640, marginBottom: 20 }}>
+          The same questions apply everywhere your audience is looking: Can they find you? Is there substance when they do? Does what they find reflect who you actually are?
+        </p>
+      </div>
+      <div style={a(4)}>
+        <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.6, maxWidth: 600, marginBottom: 28 }}>
+          Search engines, AI tools, industry directories, social platforms. Each is a surface where someone might encounter your brand for the first time.
+        </p>
+      </div>
+      <div style={a(5)}>
+        <p style={{ fontFamily: font, fontSize: 22, fontWeight: 700, color: C.orange }}>
+          The website is the foundation. Discoverability is the goal.
+        </p>
       </div>
     </div>
   );
@@ -2264,7 +2300,8 @@ const SLIDES = [
   Slide_CL_Technical,    // 28. The Technical Non-Negotiables
   Slide_CL_LivingSystem, // 29. The One Thing Most People Miss
   Slide_CL_Checklist,    // 30. The Full Checklist
-  Slide_Close,           // 31. Tyler + CTA
+  Slide_BiggerPicture,   // 31. The Bigger Picture
+  Slide_Close,           // 32. Tyler + CTA
 ];
 
 export default function Presentation() {
