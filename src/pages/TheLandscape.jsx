@@ -1538,6 +1538,654 @@ function Slide_ThreeThings() {
   );
 }
 
+/* ─── CHECKLIST SECTION ────────────────────────────────────── */
+
+function Slide_ChecklistIntro() {
+  const a = useEnter();
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', textAlign: 'center', padding: '60px 80px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+          The full checklist
+        </p>
+      </div>
+      <div style={a(1)}>
+        <h2 style={{
+          fontFamily: font, fontSize: 52, fontWeight: 700, color: C.black,
+          lineHeight: 1.08, maxWidth: 720, marginBottom: 32,
+        }}>
+          What Typically Makes a Website Impactful
+        </h2>
+      </div>
+      <div style={a(2)}>
+        <div style={{ width: 60, height: 4, background: C.orange, borderRadius: 2, margin: '0 auto 28px' }} />
+      </div>
+      <div style={a(3)}>
+        <p style={{ fontFamily: font, fontSize: 18, color: C.gray7, lineHeight: 1.65, maxWidth: 640, marginBottom: 20 }}>
+          Before you build a website, design it. And design means more than colors and fonts. It means knowing your goal, your audience, and the experience you want someone to have.
+        </p>
+      </div>
+      <div style={a(4)}>
+        <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.6, maxWidth: 600, marginBottom: 20 }}>
+          Most businesses skip this step. They jump straight to &ldquo;we need a website&rdquo; without answering <span style={{ fontWeight: 700, color: C.orange }}>why</span>. Are you trying to generate leads? Sell products? Build brand awareness? Each goal requires a fundamentally different approach.
+        </p>
+      </div>
+      <div style={a(5)}>
+        <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.black, marginTop: 8 }}>
+          This checklist covers what an impactful website actually needs.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_Homepage() {
+  const a = useEnter();
+  const points = [
+    { num: '01', text: 'Explain what you do, who you do it for, and how it works. No cleverness over clarity.' },
+    { num: '02', text: 'A first-time visitor should understand your business within 5 seconds of landing on the page.' },
+    { num: '03', text: '\u201CWe help small businesses get found online\u201D beats \u201CFull-service digital marketing agency with 12 core competencies.\u201D' },
+  ];
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px 80px', gap: 60 }}>
+      <div style={{ maxWidth: 420, flexShrink: 0 }}>
+        <div style={a(0)}>
+          <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+            Your homepage
+          </p>
+        </div>
+        <div style={a(1)}>
+          <h2 style={{ fontFamily: font, fontSize: 44, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 24 }}>
+            Your Homepage Is Your Handshake
+          </h2>
+        </div>
+        <div style={a(2)}>
+          <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.6 }}>
+            Lead with outcomes, not features. Your homepage has one job: make people want to keep scrolling.
+          </p>
+        </div>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16, flex: 1, maxWidth: 480 }}>
+        {points.map((p, i) => (
+          <div key={i} style={a(i + 2)}>
+            <GlassCard style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
+              <span style={{ fontFamily: font, fontSize: 28, fontWeight: 700, color: C.orange, opacity: 0.25, lineHeight: 1, flexShrink: 0 }}>{p.num}</span>
+              <p style={{ fontFamily: font, fontSize: 14, color: C.gray7, lineHeight: 1.6 }}>{p.text}</p>
+            </GlassCard>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_Navigation() {
+  const a = useEnter();
+  const items = [
+    { icon: Menu, title: 'Readable menus', desc: 'Someone should understand what your business does just by reading the navigation.' },
+    { icon: Zap, title: 'Keep it simple', desc: 'If you have more than 7 top-level navigation items, simplify.' },
+    { icon: BookOpen, title: 'Plain language', desc: '\u201CWhat We Do\u201D is clearer than \u201CSolutions.\u201D Label pages the way your customers talk.' },
+  ];
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', padding: '50px 60px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+          Navigation
+        </p>
+        <h2 style={{ fontFamily: font, fontSize: 40, fontWeight: 700, color: C.black, marginBottom: 32, lineHeight: 1.1 }}>
+          Navigation That Speaks for You
+        </h2>
+      </div>
+      <div style={{ display: 'flex', gap: 20 }}>
+        {items.map((t, i) => (
+          <div key={i} style={{ flex: 1, ...a(i + 1) }}>
+            <GlassCard glow={i === 0 ? C.orange : undefined} style={{ height: '100%' }}>
+              <div style={{
+                width: 40, height: 40, borderRadius: 12,
+                background: `${C.orange}12`,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                marginBottom: 14,
+              }}>
+                <t.icon size={20} color={C.orange} />
+              </div>
+              <p style={{ fontFamily: font, fontSize: 17, fontWeight: 700, color: C.black, marginBottom: 10, lineHeight: 1.3 }}>
+                {t.title}
+              </p>
+              <p style={{ fontFamily: font, fontSize: 13, color: C.gray7, lineHeight: 1.6 }}>
+                {t.desc}
+              </p>
+            </GlassCard>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_ServicePages() {
+  const a = useEnter();
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px 80px', gap: 60 }}>
+      <div style={{ maxWidth: 460 }}>
+        <div style={a(0)}>
+          <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+            Service pages
+          </p>
+        </div>
+        <div style={a(1)}>
+          <h2 style={{ fontFamily: font, fontSize: 44, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 24 }}>
+            One Page Per Service
+          </h2>
+        </div>
+        <div style={a(2)}>
+          <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.65, marginBottom: 20 }}>
+            Separate service pages drive more traffic from search engines. Each page lets you speak directly to a specific audience.
+          </p>
+        </div>
+        <div style={a(3)}>
+          <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.65, marginBottom: 20 }}>
+            A homeowner looking for a kitchen remodel has different questions than someone building a new home.
+          </p>
+        </div>
+        <div style={a(4)}>
+          <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.black, lineHeight: 1.4 }}>
+            One page trying to cover everything ends up saying nothing well.
+          </p>
+        </div>
+      </div>
+      <div style={{ flexShrink: 0, ...a(2) }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {['Kitchen Remodels', 'Bathroom Renovations', 'New Construction', 'Commercial Build-Outs'].map((s, i) => (
+            <div key={i} style={{
+              display: 'flex', alignItems: 'center', gap: 12,
+              padding: '14px 20px', background: 'rgba(255,255,255,0.6)',
+              borderRadius: 12, backdropFilter: 'blur(10px)',
+              border: `1px solid ${i === 0 ? C.orange + '44' : C.gray3}`,
+              width: 300,
+              transition: 'all 0.3s ease',
+            }}>
+              <FileText size={18} color={i === 0 ? C.orange : C.gray5} />
+              <span style={{ fontFamily: font, fontSize: 15, fontWeight: i === 0 ? 600 : 400, color: i === 0 ? C.black : C.gray7 }}>{s}</span>
+              {i === 0 && <ArrowRight size={14} color={C.orange} style={{ marginLeft: 'auto' }} />}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_People() {
+  const a = useEnter();
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', textAlign: 'center', padding: '60px 80px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+          Authenticity
+        </p>
+      </div>
+      <div style={a(1)}>
+        <h2 style={{ fontFamily: font, fontSize: 48, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 28, maxWidth: 600 }}>
+          People Hire People
+        </h2>
+      </div>
+      <div style={{ display: 'flex', gap: 24, marginBottom: 32, justifyContent: 'center' }}>
+        {[
+          { icon: Users, label: 'Real photos of your team', desc: 'Not stock photos. Not AI-generated images.' },
+          { icon: Phone, label: 'Doesn\u2019t need to be studio quality', desc: 'A well-lit photo from a phone works.' },
+          { icon: Eye, label: 'Customers want to see who they\u2019re hiring', desc: 'Before they pick up the phone.' },
+        ].map((item, i) => (
+          <div key={i} style={{ flex: 1, maxWidth: 260, ...a(i + 2) }}>
+            <GlassCard style={{ textAlign: 'center', height: '100%' }}>
+              <div style={{
+                width: 48, height: 48, borderRadius: 14,
+                background: `${C.orange}10`, margin: '0 auto 14px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}>
+                <item.icon size={22} color={C.orange} />
+              </div>
+              <p style={{ fontFamily: font, fontSize: 15, fontWeight: 700, color: C.black, marginBottom: 8 }}>{item.label}</p>
+              <p style={{ fontFamily: font, fontSize: 13, color: C.gray7, lineHeight: 1.5 }}>{item.desc}</p>
+            </GlassCard>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_Proof() {
+  const a = useEnter();
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px 80px', gap: 60 }}>
+      <div style={{ maxWidth: 440, flexShrink: 0 }}>
+        <div style={a(0)}>
+          <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+            Social proof
+          </p>
+        </div>
+        <div style={a(1)}>
+          <h2 style={{ fontFamily: font, fontSize: 44, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 24 }}>
+            Proof Over Promises
+          </h2>
+        </div>
+        <div style={a(2)}>
+          <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.65, marginBottom: 16 }}>
+            Reviews, testimonials, and case studies do more selling than any headline you write. Spend most of your effort here.
+          </p>
+        </div>
+        <div style={a(3)}>
+          <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.65 }}>
+            Place client logos or testimonials near your calls to action. Social proof works hardest at the moment someone is deciding whether to reach out.
+          </p>
+        </div>
+      </div>
+      <div style={{ flex: 1, maxWidth: 400, ...a(2) }}>
+        <GlassCard glow={C.orange}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
+            <StarRating rating={5} size={14} />
+            <span style={{ fontFamily: font, fontSize: 11, color: C.gray5 }}>Verified review</span>
+          </div>
+          <p style={{ fontFamily: font, fontSize: 16, color: C.black, lineHeight: 1.6, fontStyle: 'italic', marginBottom: 14 }}>
+            &ldquo;We completed the project 2 weeks ahead of schedule and 10% under budget.&rdquo;
+          </p>
+          <div style={{ width: '100%', height: 1, background: C.gray3, marginBottom: 12 }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <ThumbsUp size={14} color={C.orange} />
+            <span style={{ fontFamily: font, fontSize: 12, color: C.gray7 }}>
+              <span style={{ fontWeight: 700 }}>Specific numbers</span> are more convincing than vague claims
+            </span>
+          </div>
+        </GlassCard>
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_HowItWorks() {
+  const a = useEnter();
+  const steps = [
+    { num: '1', title: 'Someone fills out a form or picks up the phone', color: C.google },
+    { num: '2', title: 'Walk them through your process clearly', color: C.orange },
+    { num: '3', title: 'They feel confident taking the first step', color: '#0fa035' },
+  ];
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', padding: '50px 80px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+          Set expectations
+        </p>
+        <h2 style={{ fontFamily: font, fontSize: 40, fontWeight: 700, color: C.black, marginBottom: 12, lineHeight: 1.1 }}>
+          Set Expectations With &ldquo;How It Works&rdquo;
+        </h2>
+        <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.6, marginBottom: 32, maxWidth: 560 }}>
+          Clearly explain what happens next. When people know what to expect, they feel more confident taking the first step.
+        </p>
+      </div>
+      <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+        {steps.map((s, i) => (
+          <div key={i} style={{ display: 'flex', alignItems: 'center', flex: 1, ...a(i + 1) }}>
+            <GlassCard glow={s.color} style={{ width: '100%', textAlign: 'center' }}>
+              <div style={{
+                width: 52, height: 52, borderRadius: '50%',
+                background: `${s.color}15`, margin: '0 auto 14px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                border: `2px solid ${s.color}33`,
+              }}>
+                <span style={{ fontFamily: font, fontSize: 24, fontWeight: 700, color: s.color }}>{s.num}</span>
+              </div>
+              <p style={{ fontFamily: font, fontSize: 14, color: C.gray7, lineHeight: 1.5 }}>{s.title}</p>
+            </GlassCard>
+            {i < steps.length - 1 && (
+              <ArrowRight size={20} color={C.gray5} style={{ flexShrink: 0, margin: '0 -4px' }} />
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_Objections() {
+  const a = useEnter();
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px 80px', gap: 60 }}>
+      <div style={{ maxWidth: 420 }}>
+        <div style={a(0)}>
+          <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+            Reduce friction
+          </p>
+        </div>
+        <div style={a(1)}>
+          <h2 style={{ fontFamily: font, fontSize: 40, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 24 }}>
+            Answer Objections Before They&rsquo;re Asked
+          </h2>
+        </div>
+        <div style={a(2)}>
+          <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.65 }}>
+            Think about the questions you hear most on sales calls. Put those answers on the website. This reduces friction and saves your team time.
+          </p>
+        </div>
+      </div>
+      <div style={{ flex: 1, maxWidth: 420, ...a(2) }}>
+        <GlassCard>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+            <Shield size={20} color={C.orange} />
+            <span style={{ fontFamily: font, fontSize: 16, fontWeight: 700, color: C.black }}>FAQ Section</span>
+          </div>
+          {[
+            'How much does this typically cost?',
+            'How long does the process take?',
+            'Do you work with businesses my size?',
+            'What happens if I\u2019m not satisfied?',
+            'Can I see examples of your work?',
+          ].map((q, i) => (
+            <div key={i} style={{
+              display: 'flex', alignItems: 'center', gap: 10,
+              padding: '10px 14px', marginBottom: i < 4 ? 8 : 0,
+              background: i === 0 ? `${C.orange}08` : 'transparent',
+              borderRadius: 8,
+              border: i === 0 ? `1px solid ${C.orange}22` : `1px solid ${C.gray1}`,
+            }}>
+              <MessageSquare size={14} color={i === 0 ? C.orange : C.gray5} />
+              <span style={{ fontFamily: font, fontSize: 13, color: i === 0 ? C.black : C.gray7 }}>{q}</span>
+            </div>
+          ))}
+        </GlassCard>
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_BuyerStages() {
+  const a = useEnter();
+  const stages = [
+    {
+      stage: 'Researchers', action: 'A guide to download',
+      desc: 'Just starting to explore. Give them something useful to take with them.',
+      icon: BookOpen, color: C.google,
+    },
+    {
+      stage: 'Evaluators', action: 'A comparison page',
+      desc: 'Comparing options. Help them see why you\u2019re different.',
+      icon: Layers, color: C.orange,
+    },
+    {
+      stage: 'Buyers', action: 'A clear contact form',
+      desc: 'Ready to act now. Make the next step obvious and easy.',
+      icon: ArrowRight, color: '#0fa035',
+    },
+  ];
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', padding: '50px 60px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+          Conversion paths
+        </p>
+        <h2 style={{ fontFamily: font, fontSize: 40, fontWeight: 700, color: C.black, marginBottom: 12, lineHeight: 1.1 }}>
+          Not Everyone Is Ready to Buy
+        </h2>
+        <p style={{ fontFamily: font, fontSize: 16, color: C.gray7, lineHeight: 1.6, marginBottom: 32, maxWidth: 580 }}>
+          If your only call to action is &ldquo;Contact Us,&rdquo; you&rsquo;re losing everyone who isn&rsquo;t ready for that conversation yet.
+        </p>
+      </div>
+      <div style={{ display: 'flex', gap: 20 }}>
+        {stages.map((s, i) => (
+          <div key={i} style={{ flex: 1, ...a(i + 1) }}>
+            <GlassCard glow={s.color} style={{ height: '100%' }}>
+              <div style={{
+                width: 44, height: 44, borderRadius: 12,
+                background: `${s.color}12`,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                marginBottom: 14, border: `1px solid ${s.color}33`,
+              }}>
+                <s.icon size={20} color={s.color} />
+              </div>
+              <p style={{ fontFamily: font, fontSize: 12, fontWeight: 600, color: s.color, textTransform: 'uppercase', letterSpacing: 1.5, marginBottom: 6 }}>
+                {s.stage}
+              </p>
+              <p style={{ fontFamily: font, fontSize: 17, fontWeight: 700, color: C.black, marginBottom: 10, lineHeight: 1.3 }}>
+                {s.action}
+              </p>
+              <p style={{ fontFamily: font, fontSize: 13, color: C.gray7, lineHeight: 1.6 }}>
+                {s.desc}
+              </p>
+            </GlassCard>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_Pricing() {
+  const a = useEnter();
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', textAlign: 'center', padding: '60px 80px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+          Pricing
+        </p>
+      </div>
+      <div style={a(1)}>
+        <h2 style={{ fontFamily: font, fontSize: 48, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 28, maxWidth: 650 }}>
+          Don&rsquo;t Make People Guess
+        </h2>
+      </div>
+      <div style={a(2)}>
+        <p style={{ fontFamily: font, fontSize: 18, color: C.gray7, lineHeight: 1.65, maxWidth: 600, marginBottom: 28 }}>
+          You don&rsquo;t need to list exact prices. But give context. Starting ranges, &ldquo;projects typically range from X to Y,&rdquo; or a pricing calculator.
+        </p>
+      </div>
+      <div style={a(3)}>
+        <GlassCard glow={C.orange} style={{ maxWidth: 520, textAlign: 'center' }}>
+          <Eye size={28} color={C.orange} style={{ margin: '0 auto 14px', display: 'block' }} />
+          <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.black, marginBottom: 10 }}>
+            Hiding pricing doesn&rsquo;t create curiosity.
+          </p>
+          <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.orange }}>
+            It creates frustration.
+          </p>
+          <div style={{ width: '100%', height: 1, background: C.gray3, margin: '16px 0' }} />
+          <p style={{ fontFamily: font, fontSize: 13, color: C.gray7, lineHeight: 1.5 }}>
+            Most buyers want pricing information before they talk to a salesperson.
+          </p>
+        </GlassCard>
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_Technical() {
+  const a = useEnter();
+  const items = [
+    {
+      icon: Zap, title: 'Page speed', color: C.orange,
+      desc: 'If your site takes more than 3 seconds to load, over half of visitors leave before they see anything.',
+      stat: '3s', statLabel: 'max load time',
+    },
+    {
+      icon: Phone, title: 'Mobile-first', color: C.google,
+      desc: 'More than 60% of website traffic comes from mobile devices. Design for phones first.',
+      stat: '60%+', statLabel: 'mobile traffic',
+    },
+    {
+      icon: TrendingUp, title: 'Analytics', color: '#0fa035',
+      desc: 'Set up analytics before you launch. You can\u2019t improve what you don\u2019t measure.',
+      stat: 'Day 1', statLabel: 'configure tracking',
+    },
+    {
+      icon: Users, title: 'Accessibility', color: '#7c3aed',
+      desc: '1 in 5 people has a disability. Accessible websites are easier for everyone to use \u2014 and it\u2019s increasingly a legal requirement.',
+      stat: '1 in 5', statLabel: 'people affected',
+    },
+  ];
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', padding: '50px 60px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+          Technical foundations
+        </p>
+        <h2 style={{ fontFamily: font, fontSize: 40, fontWeight: 700, color: C.black, marginBottom: 28, lineHeight: 1.1 }}>
+          The Technical Non-Negotiables
+        </h2>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        {items.map((t, i) => (
+          <div key={i} style={a(i + 1)}>
+            <GlassCard style={{ height: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+                <div style={{
+                  width: 36, height: 36, borderRadius: 10,
+                  background: `${t.color}12`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  <t.icon size={18} color={t.color} />
+                </div>
+                <span style={{ fontFamily: font, fontSize: 16, fontWeight: 700, color: C.black }}>{t.title}</span>
+              </div>
+              <p style={{ fontFamily: font, fontSize: 13, color: C.gray7, lineHeight: 1.55, marginBottom: 12 }}>{t.desc}</p>
+              <div style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                padding: '6px 12px', borderRadius: 8,
+                background: `${t.color}08`, border: `1px solid ${t.color}22`,
+              }}>
+                <span style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: t.color }}>{t.stat}</span>
+                <span style={{ fontFamily: font, fontSize: 10, color: C.gray7 }}>{t.statLabel}</span>
+              </div>
+            </GlassCard>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_LivingSystem() {
+  const a = useEnter();
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '60px 80px', gap: 60 }}>
+      <div style={{ maxWidth: 420 }}>
+        <div style={a(0)}>
+          <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 12 }}>
+            After launch
+          </p>
+        </div>
+        <div style={a(1)}>
+          <h2 style={{ fontFamily: font, fontSize: 44, fontWeight: 700, color: C.black, lineHeight: 1.1, marginBottom: 24 }}>
+            The One Thing Most People Miss
+          </h2>
+        </div>
+        <div style={a(2)}>
+          <p style={{ fontFamily: font, fontSize: 20, fontWeight: 700, color: C.black, lineHeight: 1.4, marginBottom: 16 }}>
+            Your website is a product, not a project. It doesn&rsquo;t end at launch.
+          </p>
+        </div>
+        <div style={a(3)}>
+          <p style={{ fontFamily: font, fontSize: 16, color: C.orange, fontWeight: 700, lineHeight: 1.5 }}>
+            The businesses that treat their website as a living system outperform the ones that launch and forget. Every time.
+          </p>
+        </div>
+      </div>
+      <div style={{ flex: 1, maxWidth: 400 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {[
+            { icon: Star, text: 'Update case studies and testimonials quarterly' },
+            { icon: FileText, text: 'Refresh service pages when offerings change' },
+            { icon: Clock, text: 'Publish helpful content consistently \u2014 even once a month makes a difference' },
+          ].map((item, i) => (
+            <div key={i} style={a(i + 3)}>
+              <div style={{
+                display: 'flex', alignItems: 'flex-start', gap: 12,
+                padding: '14px 18px', background: 'rgba(255,255,255,0.6)',
+                borderRadius: 12, backdropFilter: 'blur(10px)',
+                border: `1px solid ${C.gray3}`,
+              }}>
+                <div style={{
+                  width: 32, height: 32, borderRadius: 8,
+                  background: `${C.orange}10`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  flexShrink: 0,
+                }}>
+                  <item.icon size={16} color={C.orange} />
+                </div>
+                <span style={{ fontFamily: font, fontSize: 14, color: C.black, lineHeight: 1.5 }}>{item.text}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Slide_CL_Checklist() {
+  const a = useEnter();
+  const left = [
+    'Homepage passes the 5-second test',
+    'Navigation is clear and logical',
+    'One dedicated page per service',
+    'Real photos of your team and work',
+    'Reviews, testimonials, or case studies on the site',
+    'Specific numbers and results instead of vague claims',
+    'A \u201CHow It Works\u201D section that sets expectations',
+    'FAQ sections addressing real objections',
+  ];
+  const right = [
+    'Multiple conversion paths for different buyer stages',
+    'Pricing context (ranges, starting points, or a calculator)',
+    'Page loads in under 3 seconds',
+    'Mobile-friendly (designed for phones first)',
+    'Analytics and tracking configured before launch',
+    'Accessibility compliance',
+    'A defined schedule for updating content after launch',
+  ];
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', padding: '40px 50px' }}>
+      <div style={a(0)}>
+        <p style={{ fontFamily: font, fontSize: 14, fontWeight: 600, color: C.orange, textTransform: 'uppercase', letterSpacing: 2.5, marginBottom: 10 }}>
+          Quick reference
+        </p>
+        <h2 style={{ fontFamily: font, fontSize: 36, fontWeight: 700, color: C.black, marginBottom: 24, lineHeight: 1.1 }}>
+          The Full Checklist
+        </h2>
+      </div>
+      <div style={{ display: 'flex', gap: 20, marginBottom: 28 }}>
+        <div style={{ flex: 1, ...a(1) }}>
+          <GlassCard style={{ height: '100%', padding: '20px 24px' }}>
+            {left.map((item, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, marginBottom: i < left.length - 1 ? 10 : 0 }}>
+                <CheckCircle size={16} color={C.orange} style={{ flexShrink: 0, marginTop: 2 }} />
+                <span style={{ fontFamily: font, fontSize: 13, color: C.gray7, lineHeight: 1.45 }}>{item}</span>
+              </div>
+            ))}
+          </GlassCard>
+        </div>
+        <div style={{ flex: 1, ...a(2) }}>
+          <GlassCard style={{ height: '100%', padding: '20px 24px' }}>
+            {right.map((item, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, marginBottom: i < right.length - 1 ? 10 : 0 }}>
+                <CheckCircle size={16} color={C.orange} style={{ flexShrink: 0, marginTop: 2 }} />
+                <span style={{ fontFamily: font, fontSize: 13, color: C.gray7, lineHeight: 1.45 }}>{item}</span>
+              </div>
+            ))}
+          </GlassCard>
+        </div>
+      </div>
+      <div style={a(3)}>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ fontFamily: font, fontSize: 18, fontWeight: 700, color: C.orange, marginBottom: 6 }}>
+            Design isn&rsquo;t a phase. It&rsquo;s a discipline.
+          </p>
+          <p style={{ fontFamily: font, fontSize: 15, color: C.gray7 }}>
+            The &ldquo;why&rdquo; behind your website doesn&rsquo;t stop mattering after launch day.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Slide_Close() {
   const a = useEnter();
   return (
@@ -1586,24 +2234,37 @@ function Slide_Close() {
 /* ─── MAIN PRESENTATION ──────────────────────────────────── */
 
 const SLIDES = [
-  Slide_Title,         // 1. Title
-  Slide_Mess,          // 2. The landscape is a mess
-  Slide_Disagree,      // 3. Three platforms, three answers
-  Slide_NoMasterList,  // 4. There is no master list
-  Slide_Customer,      // 5. Your customer is in the middle
-  Slide_81Percent,     // 6. 81% already have a preferred vendor
-  Slide_Instinct,      // 7. "I need a new website"
-  Slide_Trap,          // 8. Rebuilding the same problem
-  Slide_Strategy,      // 9. Strategy has to come first
-  Slide_ThreePeople,   // 10. Your customer is three different people
-  Slide_Honest,        // 11. You have to be honest
-  Slide_WhatYouOwn,    // 12. Two surfaces you control
-  Slide_Specificity,   // 13. Specificity cuts through
-  Slide_Credibility,   // 14. 50ms credibility + platform
-  Slide_OnePiece,      // 15. The website is one piece
-  Slide_Moving,        // 16. The landscape is moving
-  Slide_ThreeThings,   // 17. Three things before next week
-  Slide_Close,         // 18. Tyler + CTA
+  Slide_Title,           // 1. Title
+  Slide_Mess,            // 2. The landscape is a mess
+  Slide_Disagree,        // 3. Three platforms, three answers
+  Slide_NoMasterList,    // 4. There is no master list
+  Slide_Customer,        // 5. Your customer is in the middle
+  Slide_81Percent,       // 6. 81% already have a preferred vendor
+  Slide_Instinct,        // 7. "I need a new website"
+  Slide_Trap,            // 8. Rebuilding the same problem
+  Slide_Strategy,        // 9. Strategy has to come first
+  Slide_ThreePeople,     // 10. Your customer is three different people
+  Slide_Honest,          // 11. You have to be honest
+  Slide_WhatYouOwn,      // 12. Two surfaces you control
+  Slide_Specificity,     // 13. Specificity cuts through
+  Slide_Credibility,     // 14. 50ms credibility + platform
+  Slide_OnePiece,        // 15. The website is one piece
+  Slide_Moving,          // 16. The landscape is moving
+  Slide_ThreeThings,     // 17. Three things before next week
+  Slide_ChecklistIntro,  // 18. What Typically Makes a Website Impactful
+  Slide_CL_Homepage,     // 19. Your Homepage Is Your Handshake
+  Slide_CL_Navigation,   // 20. Navigation That Speaks for You
+  Slide_CL_ServicePages, // 21. One Page Per Service
+  Slide_CL_People,       // 22. People Hire People
+  Slide_CL_Proof,        // 23. Proof Over Promises
+  Slide_CL_HowItWorks,   // 24. Set Expectations
+  Slide_CL_Objections,   // 25. Answer Objections
+  Slide_CL_BuyerStages,  // 26. Not Everyone Is Ready to Buy
+  Slide_CL_Pricing,      // 27. Don't Make People Guess
+  Slide_CL_Technical,    // 28. The Technical Non-Negotiables
+  Slide_CL_LivingSystem, // 29. The One Thing Most People Miss
+  Slide_CL_Checklist,    // 30. The Full Checklist
+  Slide_Close,           // 31. Tyler + CTA
 ];
 
 export default function Presentation() {
