@@ -8,6 +8,8 @@ import {
 
 const LOGO = `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNzcwLjIyIDEyMDAiPgogIDxnPgogICAgPHBhdGggZD0iTTE0NDUuMDQsNjE5LjUxYy03LjE1LTEwLjkzLTI4LjE3LTQ4LjM0LTI4LjE3LTQ4LjM0bC0xLjI2LjQyczMuNzgsNDMuMywzLjc4LDU3LjU5djExMC4xNGgtNzYuNTF2LTI3Ni42MWg3OS4wM2w3OS44NywxMjIuNzVoLjg0bDc5LjQ1LTEyMi43NWg3OS4wM3YyNzYuNjFoLTc2LjUxdi0xMTAuMTRjMC0xNC4yOSwzLjM2LTU3LjU5LDMuMzYtNTcuNTlsLTEuMjYtLjQycy0yMS4wMiwzNy40MS0yOC4xNyw0OC4zNGwtNTAuODYsNzkuMDNoLTEwLjkzbC01MS43MS03OS4wM1oiIHN0eWxlPSJmaWxsOiAjMTUxNjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0yMDAxLjg4LDU5OS40N2MwLDgzLjI0LTYwLjU0LDE0NS4wMy0xNTMuNDQsMTQ1LjAzcy0xNTMuODYtNTcuNTktMTUzLjg2LTE0NS4wM2MwLTgwLjI5LDY0Ljc0LTE0MS42NywxNTMuODYtMTQxLjY3czE1My40NCw2MS4zNywxNTMuNDQsMTQxLjY3Wk0xNzc1LjcxLDU5OS44OGMwLDQ3LjkyLDMxLjUzLDc0LjgzLDcyLjczLDc0LjgzczcyLjMtMjYuOSw3Mi4zLTc0LjgzYzAtNDMuMy0zMS4xMS03Mi4zLTcyLjMtNzIuM3MtNzIuNzMsMjkuMDEtNzIuNzMsNzIuM1oiIHN0eWxlPSJmaWxsOiAjMTUxNjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0yMTM3LjUxLDYxOC40NGMtNy4xNC0xMC45My0yOC4xNi00OC4zNC0yOC4xNi00OC4zNGwtMS4yNi40MnMzLjc4LDQzLjMsMy43OCw1Ny41OXYxMTAuMTRoLTc2LjUxdi0yNzYuNjFoNzkuMDNsNzkuODcsMTIyLjc1aC44NGw3OS40NS0xMjIuNzVoNzkuMDN2Mjc2LjYxaC03Ni41MXYtMTEwLjE0YzAtMTQuMjksMy4zNi01Ny41OSwzLjM2LTU3LjU5bC0xLjI2LS40MnMtMjEuMDIsMzcuNDEtMjguMTcsNDguMzRsLTUwLjg2LDc5LjAzaC0xMC45M2wtNTEuNzEtNzkuMDNaIiBzdHlsZT0iZmlsbDogIzE1MTYxODsgc3Ryb2tlLXdpZHRoOiAwcHg7Ii8+CiAgICA8cGF0aCBkPSJNMjQ3OS44Myw2MjguMzR2NDYuMjRoMTQ0LjYxdjY2aC0yMjEuMTJ2LTI3Ni42MWgyMTQuNHY2NmgtMTM3Ljg5djQxLjYyaDExOS4zOHY1Ni43NWgtMTE5LjM4WiIgc3R5bGU9ImZpbGw6ICMxNTE2MTg7IHN0cm9rZS13aWR0aDogMHB4OyIvPgogICAgPHBhdGggZD0iTTI4NjMuMzYsNDY3LjcyaDc2LjUxdjI3Ni42MWgtNzMuNTZsLTEyOS45LTE1OC45LS44NC40MnMzLjM2LDM3LDMuMzYsNTYuMzN2MTAyLjE1aC03Ni41MXYtMjc2LjYxaDc0LjgybDEyOC4yMiwxNTYuMzhoLjg0cy0yLjk0LTM2Ljk5LTIuOTQtNTIuOTd2LTEwMy40MVoiIHN0eWxlPSJmaWxsOiAjMTUxNjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0zMDUzLjY3LDUzMS42NGgtOTMuNzV2LTY3LjI2aDI2NC40MnY2Ny4yNmgtOTQuMTZ2MjA5LjM1aC03Ni41MXYtMjA5LjM1WiIgc3R5bGU9ImZpbGw6ICMxNTE2MTg7IHN0cm9rZS13aWR0aDogMHB4OyIvPgogICAgPHBhdGggZD0iTTMzMjAuODQsNDYyLjM2djI3Ni42MWgtNzYuNTF2LTI3Ni42MWg3Ni41MVoiIHN0eWxlPSJmaWxsOiAjMTUxNjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0zMzU0LjA4LDYwMS4zOGMwLTgwLjI5LDYwLjExLTE0NS44NywxNTQuNy0xNDUuODcsNTQuNjUsMCw4NS43NiwxOC4wOCwxMDQuNjgsMzIuMzdsLTIzLjU0LDYxLjM3Yy0xOS43Ni0xNS45Ny00NC45OC0yNi40OC03My45OS0yNi40OC00OS42LDAtNzkuNDUsMzQuNDctNzkuNDUsNzcuMzVzMjksNzQuODMsODEuMTMsNzQuODNjMzcsMCw2My45LTE4LjUsNzkuODctMzEuOTVsMjQuMzgsNTcuMTdjLTE0LjcxLDE1LjEzLTUzLjM5LDQyLjA0LTExMi42Niw0Mi4wNC0xMDguMDQsMC0xNTUuMTItNjcuMjYtMTU1LjEyLTE0MC44M1oiIHN0eWxlPSJmaWxsOiAjMTUxNjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICA8L2c+CiAgPGc+CiAgICA8cGF0aCBkPSJNMzY3OS4yMSw0NjcuNTloLTIyLjMzdi01LjIzaDUwLjQ2djUuMjNoLTIyLjMzdjQ4LjU3aC01Ljgxdi00OC41N1oiIHN0eWxlPSJmaWxsOiAjMTUxNjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0zNzI4LjM1LDQ4My4wNWMtMi4yMS0zLjc2LTcuNDQtMTMtNy40NC0xM2gtLjE3cy41OCwxMC4xNC41OCwxNC40OHYzMS42NWgtNS44MXYtNTMuODFoNi4zOGwyMC45NCwzNC4zNGguMTdsMjAuODYtMzQuMzRoNi4zN3Y1My44MWgtNS44di0zMS42NWMwLTQuMzMuNjYtMTQuNDguNjYtMTQuNDhoLS4yNXMtNS4xNSw5LjI0LTcuNDUsMTNsLTEzLjY1LDIyLjQ5aC0xLjY0bC0xMy43NC0yMi40OVoiIHN0eWxlPSJmaWxsOiAjMTUxNjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICA8L2c+CiAgPHBhdGggZD0iTTYwMCwxMDBjLTE0NC41MywwLTI4NC44MywyNy43LTQxNy42Miw4Mi4zOC01NC42OCwxMzIuNzgtODIuMzgsMjczLjA5LTgyLjM4LDQxNy42MnMyNy43LDI4NC44Myw4Mi4zOCw0MTcuNjJjMTMyLjc4LDU0LjY4LDI3My4wOSw4Mi4zOCw0MTcuNjIsODIuMzhzMjg0LjgzLTI3LjcsNDE3LjYyLTgyLjM4YzU0LjY4LTEzMi43OCw4Mi4zOC0yNzMuMDksODIuMzgtNDE3LjYycy0yNy43LTI4NC44My04Mi4zOC00MTcuNjJjLTEzMi43OC01NC42OC0yNzMuMDktODIuMzgtNDE3LjYyLTgyLjM4WiIgc3R5bGU9ImZpbGw6ICNmZmY7IHN0cm9rZS13aWR0aDogMHB4OyIvPgogIDxwYXRoIGQ9Ik02MDAsMEM0MjMuOTYsMCwyNTYuOTQsMzguMjIsMTA2LjMyLDEwNi4zMiwzOC4yMiwyNTYuOTQsMCw0MjMuOTYsMCw2MDBzMzguMjIsMzQzLjA2LDEwNi4zMiw0OTMuNjhjMTUwLjYyLDY4LjEsMzE3LjY0LDEwNi4zMiw0OTMuNjgsMTA2LjMyczM0My4wNi0zOC4yMiw0OTMuNjgtMTA2LjMyYzY4LjEtMTUwLjYyLDEwNi4zMi0zMTcuNjQsMTA2LjMyLTQ5My42OHMtMzguMjItMzQzLjA2LTEwNi4zMi00OTMuNjhDOTQzLjA2LDM4LjIyLDc3Ni4wNCwwLDYwMCwwWk0xMDE3LjYyLDEwMTcuNjJjLTEzMi43OCw1NC42OC0yNzMuMDksODIuMzgtNDE3LjYyLDgyLjM4cy0yODQuODMtMjcuNy00MTcuNjItODIuMzhjLTU0LjY4LTEzMi43OC04Mi4zOC0yNzMuMDktODIuMzgtNDE3LjYyczI3LjctMjg0LjgzLDgyLjM4LTQxNy42MmMxMzIuNzgtNTQuNjgsMjczLjA5LTgyLjM4LDQxNy42Mi04Mi4zOHMyODQuODMsMjcuNyw0MTcuNjIsODIuMzhjNTQuNjgsMTMyLjc4LDgyLjM4LDI3My4wOSw4Mi4zOCw0MTcuNjJzLTI3LjcsMjg0LjgzLTgyLjM4LDQxNy42MloiIHN0eWxlPSJmaWxsOiAjZmY0ZjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICA8cGF0aCBkPSJNNTA1LDYzMC44NWMtMTEuOTItMTguMjMtNDYuOTctODAuNjItNDYuOTctODAuNjJsLTIuMS43czYuMzEsNzIuMjEsNi4zMSw5Ni4wNHYxODMuNjhoLTEyNy41OXYtNDYxLjNoMTMxLjhsMTMzLjIxLDIwNC43MWgxLjRsMTMyLjUtMjA0LjcxaDEzMS44djQ2MS4zaC0xMjcuNnYtMTgzLjY4YzAtMjMuODQsNS42MS05Ni4wNCw1LjYxLTk2LjA0bC0yLjEtLjdzLTM1LjA1LDYyLjM5LTQ2Ljk3LDgwLjYybC04NC44MywxMzEuOGgtMTguMjNsLTg2LjI0LTEzMS44WiIgc3R5bGU9ImZpbGw6ICMxNTE2MTg7IHN0cm9rZS13aWR0aDogMHB4OyIvPgo8L3N2Zz4=`;
 
+const LOGO_DARK = `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNzcwLjIyIDEyMDAiPgogIDxnPgogICAgPHBhdGggZD0iTTE0NDUuMDQsNjE5LjUxYy03LjE1LTEwLjkzLTI4LjE3LTQ4LjM0LTI4LjE3LTQ4LjM0bC0xLjI2LjQyczMuNzgsNDMuMywzLjc4LDU3LjU5djExMC4xNGgtNzYuNTF2LTI3Ni42MWg3OS4wM2w3OS44NywxMjIuNzVoLjg0bDc5LjQ1LTEyMi43NWg3OS4wM3YyNzYuNjFoLTc2LjUxdi0xMTAuMTRjMC0xNC4yOSwzLjM2LTU3LjU5LDMuMzYtNTcuNTlsLTEuMjYtLjQycy0yMS4wMiwzNy40MS0yOC4xNyw0OC4zNGwtNTAuODYsNzkuMDNoLTEwLjkzbC01MS43MS03OS4wM1oiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0yMDAxLjg4LDU5OS40N2MwLDgzLjI0LTYwLjU0LDE0NS4wMy0xNTMuNDQsMTQ1LjAzcy0xNTMuODYtNTcuNTktMTUzLjg2LTE0NS4wM2MwLTgwLjI5LDY0Ljc0LTE0MS42NywxNTMuODYtMTQxLjY3czE1My40NCw2MS4zNywxNTMuNDQsMTQxLjY3Wk0xNzc1LjcxLDU5OS44OGMwLDQ3LjkyLDMxLjUzLDc0LjgzLDcyLjczLDc0LjgzczcyLjMtMjYuOSw3Mi4zLTc0LjgzYzAtNDMuMy0zMS4xMS03Mi4zLTcyLjMtNzIuM3MtNzIuNzMsMjkuMDEtNzIuNzMsNzIuM1oiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0yMTM3LjUxLDYxOC40NGMtNy4xNC0xMC45My0yOC4xNi00OC4zNC0yOC4xNi00OC4zNGwtMS4yNi40MnMzLjc4LDQzLjMsMy43OCw1Ny41OXYxMTAuMTRoLTc2LjUxdi0yNzYuNjFoNzkuMDNsNzkuODcsMTIyLjc1aC44NGw3OS40NS0xMjIuNzVoNzkuMDN2Mjc2LjYxaC03Ni41MXYtMTEwLjE0YzAtMTQuMjksMy4zNi01Ny41OSwzLjM2LTU3LjU5bC0xLjI2LS40MnMtMjEuMDIsMzcuNDEtMjguMTcsNDguMzRsLTUwLjg2LDc5LjAzaC0xMC45M2wtNTEuNzEtNzkuMDNaIiBzdHlsZT0iZmlsbDogI2ZmZmZmZjsgc3Ryb2tlLXdpZHRoOiAwcHg7Ii8+CiAgICA8cGF0aCBkPSJNMjQ3OS44Myw2MjguMzR2NDYuMjRoMTQ0LjYxdjY2aC0yMjEuMTJ2LTI3Ni42MWgyMTQuNHY2NmgtMTM3Ljg5djQxLjYyaDExOS4zOHY1Ni43NWgtMTE5LjM4WiIgc3R5bGU9ImZpbGw6ICNmZmZmZmY7IHN0cm9rZS13aWR0aDogMHB4OyIvPgogICAgPHBhdGggZD0iTTI4NjMuMzYsNDY3LjcyaDc2LjUxdjI3Ni42MWgtNzMuNTZsLTEyOS45LTE1OC45LS44NC40MnMzLjM2LDM3LDMuMzYsNTYuMzN2MTAyLjE1aC03Ni41MXYtMjc2LjYxaDc0LjgybDEyOC4yMiwxNTYuMzhoLjg0cy0yLjk0LTM2Ljk5LTIuOTQtNTIuOTd2LTEwMy40MVoiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0zMDUzLjY3LDUzMS42NGgtOTMuNzV2LTY3LjI2aDI2NC40MnY2Ny4yNmgtOTQuMTZ2MjA5LjM1aC03Ni41MXYtMjA5LjM1WiIgc3R5bGU9ImZpbGw6ICNmZmZmZmY7IHN0cm9rZS13aWR0aDogMHB4OyIvPgogICAgPHBhdGggZD0iTTMzMjAuODQsNDYyLjM2djI3Ni42MWgtNzYuNTF2LTI3Ni42MWg3Ni41MVoiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0zMzU0LjA4LDYwMS4zOGMwLTgwLjI5LDYwLjExLTE0NS44NywxNTQuNy0xNDUuODcsNTQuNjUsMCw4NS43NiwxOC4wOCwxMDQuNjgsMzIuMzdsLTIzLjU0LDYxLjM3Yy0xOS43Ni0xNS45Ny00NC45OC0yNi40OC03My45OS0yNi40OC00OS42LDAtNzkuNDUsMzQuNDctNzkuNDUsNzcuMzVzMjksNzQuODMsODEuMTMsNzQuODNjMzcsMCw2My45LTE4LjUsNzkuODctMzEuOTVsMjQuMzgsNTcuMTdjLTE0LjcxLDE1LjEzLTUzLjM5LDQyLjA0LTExMi42Niw0Mi4wNC0xMDguMDQsMC0xNTUuMTItNjcuMjYtMTU1LjEyLTE0MC44M1oiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICA8L2c+CiAgPGc+CiAgICA8cGF0aCBkPSJNMzY3OS4yMSw0NjcuNTloLTIyLjMzdi01LjIzaDUwLjQ2djUuMjNoLTIyLjMzdjQ4LjU3aC01Ljgxdi00OC41N1oiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICAgIDxwYXRoIGQ9Ik0zNzI4LjM1LDQ4My4wNWMtMi4yMS0zLjc2LTcuNDQtMTMtNy40NC0xM2gtLjE3cy41OCwxMC4xNC41OCwxNC40OHYzMS42NWgtNS44MXYtNTMuODFoNi4zOGwyMC45NCwzNC4zNGguMTdsMjAuODYtMzQuMzRoNi4zN3Y1My44MWgtNS44di0zMS42NWMwLTQuMzMuNjYtMTQuNDguNjYtMTQuNDhoLS4yNXMtNS4xNSw5LjI0LTcuNDUsMTNsLTEzLjY1LDIyLjQ5aC0xLjY0bC0xMy43NC0yMi40OVoiIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICA8L2c+CiAgPHBhdGggZD0iTTYwMCwxMDBjLTE0NC41MywwLTI4NC44MywyNy43LTQxNy42Miw4Mi4zOC01NC42OCwxMzIuNzgtODIuMzgsMjczLjA5LTgyLjM4LDQxNy42MnMyNy43LDI4NC44Myw4Mi4zOCw0MTcuNjJjMTMyLjc4LDU0LjY4LDI3My4wOSw4Mi4zOCw0MTcuNjIsODIuMzhzMjg0LjgzLTI3LjcsNDE3LjYyLTgyLjM4YzU0LjY4LTEzMi43OCw4Mi4zOC0yNzMuMDksODIuMzgtNDE3LjYycy0yNy43LTI4NC44My04Mi4zOC00MTcuNjJjLTEzMi43OC01NC42OC0yNzMuMDktODIuMzgtNDE3LjYyLTgyLjM4WiIgc3R5bGU9ImZpbGw6ICNmZmY7IHN0cm9rZS13aWR0aDogMHB4OyIvPgogIDxwYXRoIGQ9Ik02MDAsMEM0MjMuOTYsMCwyNTYuOTQsMzguMjIsMTA2LjMyLDEwNi4zMiwzOC4yMiwyNTYuOTQsMCw0MjMuOTYsMCw2MDBzMzguMjIsMzQzLjA2LDEwNi4zMiw0OTMuNjhjMTUwLjYyLDY4LjEsMzE3LjY0LDEwNi4zMiw0OTMuNjgsMTA2LjMyczM0My4wNi0zOC4yMiw0OTMuNjgtMTA2LjMyYzY4LjEtMTUwLjYyLDEwNi4zMi0zMTcuNjQsMTA2LjMyLTQ5My42OHMtMzguMjItMzQzLjA2LTEwNi4zMi00OTMuNjhDOTQzLjA2LDM4LjIyLDc3Ni4wNCwwLDYwMCwwWk0xMDE3LjYyLDEwMTcuNjJjLTEzMi43OCw1NC42OC0yNzMuMDksODIuMzgtNDE3LjYyLDgyLjM4cy0yODQuODMtMjcuNy00MTcuNjItODIuMzhjLTU0LjY4LTEzMi43OC04Mi4zOC0yNzMuMDktODIuMzgtNDE3LjYyczI3LjctMjg0LjgzLDgyLjM4LTQxNy42MmMxMzIuNzgtNTQuNjgsMjczLjA5LTgyLjM4LDQxNy42Mi04Mi4zOHMyODQuODMsMjcuNyw0MTcuNjIsODIuMzhjNTQuNjgsMTMyLjc4LDgyLjM4LDI3My4wOSw4Mi4zOCw0MTcuNjJzLTI3LjcsMjg0LjgzLTgyLjM4LDQxNy42MloiIHN0eWxlPSJmaWxsOiAjZmY0ZjE4OyBzdHJva2Utd2lkdGg6IDBweDsiLz4KICA8cGF0aCBkPSJNNTA1LDYzMC44NWMtMTEuOTItMTguMjMtNDYuOTctODAuNjItNDYuOTctODAuNjJsLTIuMS43czYuMzEsNzIuMjEsNi4zMSw5Ni4wNHYxODMuNjhoLTEyNy41OXYtNDYxLjNoMTMxLjhsMTMzLjIxLDIwNC43MWgxLjRsMTMyLjUtMjA0LjcxaDEzMS44djQ2MS4zaC0xMjcuNnYtMTgzLjY4YzAtMjMuODQsNS42MS05Ni4wNCw1LjYxLTk2LjA0bC0yLjEtLjdzLTM1LjA1LDYyLjM5LTQ2Ljk3LDgwLjYybC04NC44MywxMzEuOGgtMTguMjNsLTg2LjI0LTEzMS44WiIgc3R5bGU9ImZpbGw6ICMxNTE2MTg7IHN0cm9rZS13aWR0aDogMHB4OyIvPgo8L3N2Zz4=`;
+
 /* ─── DESIGN TOKENS (DARK MODE) ─────────────────────────── */
 const C = {
   bg: '#0f1117', surface: '#161822', white: '#ffffff',
@@ -99,7 +101,7 @@ function BrowserChrome({ url, children, style = {} }) {
           {url}
         </div>
       </div>
-      <div>{children}</div>
+      <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>{children}</div>
     </div>
   );
 }
@@ -186,7 +188,7 @@ function Slide_Title() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', textAlign: 'center', padding: '60px 80px', position: 'relative' }}>
       <div style={a(0)}>
-        <img src={LOGO} alt="Momentic" style={{ height: 36, marginBottom: 48, filter: 'brightness(0) invert(1)', opacity: 0.7 }} />
+        <img src={LOGO_DARK} alt="Momentic" style={{ height: 36, marginBottom: 48, opacity: 0.7 }} />
       </div>
       <div style={a(1)}>
         <Badge>The Momentic method</Badge>
@@ -976,28 +978,30 @@ export default function Presentation() {
   }, [slide, locked, TOTAL]);
 
   useEffect(() => {
+    const isLastSlide = slide === TOTAL - 1;
     const onKey = (e) => {
-      if (['ArrowRight', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); go(1); }
+      if (!isLastSlide && ['ArrowRight', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); go(1); }
       if (e.key === 'ArrowLeft' || e.key === 'Backspace') { e.preventDefault(); go(-1); }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [go]);
+  }, [go, slide, TOTAL]);
 
   const Current = SLIDES[slide];
 
   return (
     <div
-      style={{ position: 'fixed', inset: 0, background: C.bg, fontFamily: font, overflow: 'hidden', cursor: 'pointer', userSelect: 'none' }}
+      style={{ position: 'fixed', inset: 0, background: C.bg, fontFamily: font, overflow: slide === TOTAL - 1 ? 'visible' : 'hidden', cursor: slide === TOTAL - 1 ? 'default' : 'pointer', userSelect: slide === TOTAL - 1 ? 'auto' : 'none' }}
       onClick={(e) => {
+        if (slide === TOTAL - 1) return;
         if (e.target.closest?.('button, a, input, nav')) return;
         const x = e.clientX / window.innerWidth;
         if (x > 0.55) go(1);
         else if (x < 0.45) go(-1);
       }}
-      onTouchStart={(e) => { touchRef.current = e.touches[0].clientX; }}
+      onTouchStart={(e) => { if (slide !== TOTAL - 1) touchRef.current = e.touches[0].clientX; }}
       onTouchEnd={(e) => {
-        if (touchRef.current === null) return;
+        if (slide === TOTAL - 1 || touchRef.current === null) return;
         const dx = e.changedTouches[0].clientX - touchRef.current;
         if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
         touchRef.current = null;
@@ -1041,10 +1045,9 @@ export default function Presentation() {
 
       {/* Logo */}
       {slide > 0 && slide < TOTAL - 1 && (
-        <img src={LOGO} alt="" style={{
+        <img src={LOGO_DARK} alt="" style={{
           position: 'fixed', bottom: 16, left: 24,
           height: 20, opacity: 0.25, zIndex: 150, pointerEvents: 'none',
-          filter: 'brightness(0) invert(1)',
         }} />
       )}
 

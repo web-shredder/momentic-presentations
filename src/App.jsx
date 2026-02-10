@@ -83,7 +83,7 @@ const LandingPage = () => {
     <div style={containerStyle}>
       <div style={contentStyle}>
         <h1 style={titleStyle}>Momentic</h1>
-        <p style={subtitleStyle}>Northshore Chamber of Commerce, February 2026</p>
+        <p style={subtitleStyle}>mkedmc.org &middot; February 2026</p>
 
         <div style={cardsContainerStyle}>
           <Link

@@ -367,7 +367,7 @@ function Slide_Title() {
       </div>
       <div style={a(3)}>
         <p style={{ fontFamily: font, fontSize: 18, color: C.gray7, fontWeight: 400 }}>
-          Northshore Chamber of Commerce &nbsp;&middot;&nbsp; February 10, 2026
+          mkedmc.org &nbsp;&middot;&nbsp; February 10, 2026
         </p>
       </div>
       <div style={a(4)}>
@@ -1569,7 +1569,7 @@ function Slide_Close() {
           <div style={{ width: 40, height: 2, background: C.orange, borderRadius: 1, margin: '14px auto' }} />
           <p style={{ fontFamily: font, fontSize: 14, color: C.orange, fontWeight: 500, marginBottom: 6 }}>tyler@momenticmarketing.com</p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginBottom: 16 }}>
-            {['momenticmarketing.com', 'mkedmc.com'].map(u => (
+            {['momenticmarketing.com', 'mkedmc.org'].map(u => (
               <span key={u} style={{ fontFamily: font, fontSize: 11, color: C.gray5 }}>{u}</span>
             ))}
           </div>
